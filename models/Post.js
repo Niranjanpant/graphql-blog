@@ -11,6 +11,7 @@ body:{
 published:{
     type:Boolean
 },
+createdAt:String,
 
 comments:[{
     text:String,

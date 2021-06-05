@@ -3,13 +3,14 @@ const mongoose = require("mongoose")
 const {MONGODB_URL} = require("./config/config")
 const typeDefs = require("./graphql/typeDefs")
 
-const resolvers =require("./graphql/resolver/users")
+const resolvers =require("./graphql/resolver/index")
 
 const port = 3000
 
 const server = new ApolloServer({
     typeDefs,
-    resolvers
+    resolvers,
+    context:({req}) => {req}
 })
 
 

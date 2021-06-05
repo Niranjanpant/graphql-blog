@@ -6,19 +6,25 @@ name:{
     type:String
 },
 email:{
-    type:String
+    type:String,
+    unique:true
+},
+password:{
+type:String
 },
 age:{
     type:String
 },
+createdAt:String,
 posts:[{
     title:String,
     body:String,
     published:String,
+    createdAt:String
 }],
 comments:[{
     text:String,
-    
+createdAt:String    
 }]
 
 })
